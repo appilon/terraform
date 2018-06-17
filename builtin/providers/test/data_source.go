@@ -3,7 +3,7 @@ package test
 import (
 	"time"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func testDataSource() *schema.Resource {

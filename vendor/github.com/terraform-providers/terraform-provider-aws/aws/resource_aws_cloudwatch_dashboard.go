@@ -6,8 +6,8 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/cloudwatch"
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/helper/structure"
+	"github.com/appilon/terraform-plugin-sdk/schema"
+	"github.com/appilon/terraform-plugin-sdk/structure"
 )
 
 func resourceAwsCloudWatchDashboard() *schema.Resource {

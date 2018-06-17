@@ -5,7 +5,7 @@ import (
 
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/hashicorp/errwrap"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 // Security group import fans out to multiple resources due to the

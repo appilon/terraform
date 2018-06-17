@@ -10,8 +10,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/service/iam"
 
-	"github.com/hashicorp/terraform/helper/encryption"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/encryption"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func resourceAwsIamAccessKey() *schema.Resource {

@@ -12,10 +12,10 @@ import (
 	"sync"
 	"testing"
 
+	"github.com/appilon/terraform-plugin-sdk/logging"
 	"github.com/hashicorp/terraform/config"
 	"github.com/hashicorp/terraform/config/module"
 	"github.com/hashicorp/terraform/helper/experiment"
-	"github.com/hashicorp/terraform/helper/logging"
 )
 
 // This is the directory where our test fixtures are.

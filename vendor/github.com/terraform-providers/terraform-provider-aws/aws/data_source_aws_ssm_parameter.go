@@ -9,7 +9,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/arn"
 	"github.com/aws/aws-sdk-go/service/ssm"
 	"github.com/hashicorp/errwrap"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func dataSourceAwsSsmParameter() *schema.Resource {

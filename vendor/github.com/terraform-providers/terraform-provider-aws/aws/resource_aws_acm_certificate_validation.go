@@ -9,8 +9,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/acm"
 	multierror "github.com/hashicorp/go-multierror"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/resource"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func resourceAwsAcmCertificateValidation() *schema.Resource {

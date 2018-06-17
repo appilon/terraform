@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/hashicorp/terraform/communicator"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/go-homedir"
 )

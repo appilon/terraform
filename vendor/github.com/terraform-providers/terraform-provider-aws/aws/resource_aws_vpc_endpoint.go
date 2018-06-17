@@ -9,10 +9,10 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/hashicorp/errwrap"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/helper/structure"
-	"github.com/hashicorp/terraform/helper/validation"
+	"github.com/appilon/terraform-plugin-sdk/resource"
+	"github.com/appilon/terraform-plugin-sdk/schema"
+	"github.com/appilon/terraform-plugin-sdk/structure"
+	"github.com/appilon/terraform-plugin-sdk/validation"
 )
 
 func resourceAwsVpcEndpoint() *schema.Resource {

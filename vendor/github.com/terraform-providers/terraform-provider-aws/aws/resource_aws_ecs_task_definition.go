@@ -8,9 +8,9 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ecs"
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/helper/structure"
+	"github.com/appilon/terraform-plugin-sdk/hashcode"
+	"github.com/appilon/terraform-plugin-sdk/schema"
+	"github.com/appilon/terraform-plugin-sdk/structure"
 )
 
 func resourceAwsEcsTaskDefinition() *schema.Resource {

@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hashicorp/terraform/helper/logging"
+	"github.com/appilon/terraform-plugin-sdk/logging"
 )
 
 func TestMain(m *testing.M) {

@@ -1,8 +1,8 @@
 package openstack
 
 import (
-	"github.com/hashicorp/terraform/helper/mutexkv"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/mutexkv"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 	"github.com/hashicorp/terraform/terraform"
 )
 

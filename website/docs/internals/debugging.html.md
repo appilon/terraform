@@ -41,10 +41,10 @@ panic(0xabc100, 0xd93000a0a0)
 	/opt/go/src/runtime/panic.go:464 +0x3e6
 github.com/hashicorp/terraform/builtin/providers/aws.resourceAwsSomeResourceCreate(...)
 	/opt/gopath/src/github.com/hashicorp/terraform/builtin/providers/aws/resource_aws_some_resource.go:123 +0x123
-github.com/hashicorp/terraform/helper/schema.(*Resource).Refresh(...)
-	/opt/gopath/src/github.com/hashicorp/terraform/helper/schema/resource.go:209 +0x123
-github.com/hashicorp/terraform/helper/schema.(*Provider).Refresh(...)
-	/opt/gopath/src/github.com/hashicorp/terraform/helper/schema/provider.go:187 +0x123
+github.com/appilon/terraform-plugin-sdk/schema.(*Resource).Refresh(...)
+	/opt/gopath/src/github.com/appilon/terraform-plugin-sdk/schema/resource.go:209 +0x123
+github.com/appilon/terraform-plugin-sdk/schema.(*Provider).Refresh(...)
+	/opt/gopath/src/github.com/appilon/terraform-plugin-sdk/schema/provider.go:187 +0x123
 github.com/hashicorp/terraform/rpc.(*ResourceProviderServer).Refresh(...)
 	/opt/gopath/src/github.com/hashicorp/terraform/rpc/resource_provider.go:345 +0x6a
 reflect.Value.call(...)

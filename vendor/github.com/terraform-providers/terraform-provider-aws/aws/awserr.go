@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/hashicorp/terraform/helper/resource"
+	"github.com/appilon/terraform-plugin-sdk/resource"
 )
 
 func isAWSErr(err error, code string, message string) bool {

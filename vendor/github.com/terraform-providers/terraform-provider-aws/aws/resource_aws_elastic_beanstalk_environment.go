@@ -9,14 +9,14 @@ import (
 	"time"
 
 	"github.com/hashicorp/go-multierror"
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/hashcode"
+	"github.com/appilon/terraform-plugin-sdk/resource"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/aws/aws-sdk-go/service/elasticbeanstalk"
-	"github.com/hashicorp/terraform/helper/structure"
+	"github.com/appilon/terraform-plugin-sdk/structure"
 )
 
 func resourceAwsElasticBeanstalkOptionSetting() *schema.Resource {

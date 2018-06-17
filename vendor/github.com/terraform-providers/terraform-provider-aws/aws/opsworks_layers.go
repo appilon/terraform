@@ -5,13 +5,13 @@ import (
 	"log"
 	"strconv"
 
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/hashcode"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/service/opsworks"
-	"github.com/hashicorp/terraform/helper/structure"
+	"github.com/appilon/terraform-plugin-sdk/structure"
 )
 
 // OpsWorks has a single concept of "layer" which represents several different

@@ -13,9 +13,9 @@ import (
 
 	"github.com/mitchellh/colorstring"
 
+	"github.com/appilon/terraform-plugin-sdk/logging"
 	"github.com/hashicorp/go-plugin"
 	"github.com/hashicorp/terraform/command/format"
-	"github.com/hashicorp/terraform/helper/logging"
 	"github.com/hashicorp/terraform/terraform"
 	"github.com/mattn/go-colorable"
 	"github.com/mattn/go-shellwords"

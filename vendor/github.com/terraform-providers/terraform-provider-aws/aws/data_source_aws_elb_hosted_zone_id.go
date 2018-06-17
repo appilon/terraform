@@ -3,7 +3,7 @@ package aws
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 // See http://docs.aws.amazon.com/general/latest/gr/rande.html#elb_region

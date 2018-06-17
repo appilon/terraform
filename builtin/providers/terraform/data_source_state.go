@@ -8,7 +8,7 @@ import (
 	"github.com/hashicorp/terraform/backend"
 	backendinit "github.com/hashicorp/terraform/backend/init"
 	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 	"github.com/hashicorp/terraform/terraform"
 )
 

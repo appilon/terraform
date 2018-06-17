@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/hashicorp/terraform/helper/hashcode"
+	"github.com/appilon/terraform-plugin-sdk/hashcode"
 	"github.com/hashicorp/terraform/terraform"
 )
 

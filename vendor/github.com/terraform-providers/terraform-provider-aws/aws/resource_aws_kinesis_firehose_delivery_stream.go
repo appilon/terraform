@@ -10,9 +10,9 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/arn"
 	"github.com/aws/aws-sdk-go/service/firehose"
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/hashcode"
+	"github.com/appilon/terraform-plugin-sdk/resource"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func cloudWatchLoggingOptionsSchema() *schema.Schema {

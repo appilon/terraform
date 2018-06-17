@@ -9,8 +9,8 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/redshift"
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/hashcode"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func resourceAwsRedshiftParameterGroup() *schema.Resource {

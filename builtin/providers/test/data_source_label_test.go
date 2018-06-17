@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/helper/resource"
+	"github.com/appilon/terraform-plugin-sdk/resource"
 	"github.com/hashicorp/terraform/terraform"
 )
 

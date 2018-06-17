@@ -6,7 +6,7 @@ import (
 	"regexp"
 
 	"github.com/aws/aws-sdk-go/service/elasticbeanstalk"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func dataSourceAwsElasticBeanstalkSolutionStack() *schema.Resource {

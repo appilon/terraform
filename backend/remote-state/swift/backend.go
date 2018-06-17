@@ -12,7 +12,7 @@ import (
 	"github.com/gophercloud/gophercloud/openstack"
 
 	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 	tf_openstack "github.com/terraform-providers/terraform-provider-openstack/openstack"
 )
 

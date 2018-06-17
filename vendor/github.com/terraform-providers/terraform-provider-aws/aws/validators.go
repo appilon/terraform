@@ -18,8 +18,8 @@ import (
 	"github.com/aws/aws-sdk-go/service/gamelift"
 	"github.com/aws/aws-sdk-go/service/guardduty"
 	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/helper/structure"
+	"github.com/appilon/terraform-plugin-sdk/schema"
+	"github.com/appilon/terraform-plugin-sdk/structure"
 )
 
 func validateInstanceUserDataSize(v interface{}, k string) (ws []string, errors []error) {

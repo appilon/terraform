@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/hashicorp/go-cleanhttp"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 type dataSourceAwsIPRangesResult struct {

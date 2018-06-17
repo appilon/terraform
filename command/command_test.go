@@ -19,8 +19,8 @@ import (
 	"syscall"
 	"testing"
 
+	"github.com/appilon/terraform-plugin-sdk/logging"
 	"github.com/hashicorp/terraform/config/module"
-	"github.com/hashicorp/terraform/helper/logging"
 	"github.com/hashicorp/terraform/terraform"
 )
 

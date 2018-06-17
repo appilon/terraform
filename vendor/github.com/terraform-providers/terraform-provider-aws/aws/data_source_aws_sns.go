@@ -8,7 +8,7 @@ import (
 
 	"github.com/aws/aws-sdk-go/service/sns"
 	"github.com/hashicorp/errwrap"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func dataSourceAwsSnsTopic() *schema.Resource {

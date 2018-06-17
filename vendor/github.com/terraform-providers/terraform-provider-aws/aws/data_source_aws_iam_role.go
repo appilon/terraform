@@ -2,7 +2,7 @@ package aws
 
 import (
 	"fmt"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func dataSourceAwsIAMRole() *schema.Resource {

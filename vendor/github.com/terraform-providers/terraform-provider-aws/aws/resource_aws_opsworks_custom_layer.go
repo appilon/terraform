@@ -1,7 +1,7 @@
 package aws
 
 import (
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func resourceAwsOpsworksCustomLayer() *schema.Resource {

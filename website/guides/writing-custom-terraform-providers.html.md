@@ -51,7 +51,7 @@ and should include the following boilerplate code:
 package main
 
 import (
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func Provider() *schema.Provider {
@@ -62,7 +62,7 @@ func Provider() *schema.Provider {
 ```
 
 The
-[`helper/schema`](https://godoc.org/github.com/hashicorp/terraform/helper/schema)
+[`helper/schema`](https://godoc.org/github.com/appilon/terraform-plugin-sdk/schema)
 library is part of Terraform's core. It abstracts many of the complexities and
 ensures consistency between providers. The example above defines an empty provider (there are no _resources_).
 
@@ -148,7 +148,7 @@ file, named after the resource, prefixed with `resource_`. To create an
 package main
 
 import (
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 func resourceServer() *schema.Resource {
@@ -170,7 +170,7 @@ func resourceServer() *schema.Resource {
 ```
 
 This uses the
-[`schema.Resource` type](https://godoc.org/github.com/hashicorp/terraform/helper/schema#Resource).
+[`schema.Resource` type](https://godoc.org/github.com/appilon/terraform-plugin-sdk/schema#Resource).
 This structure defines the data schema and CRUD operations for the resource.
 Defining these properties are the only required thing to create a resource.
 
@@ -308,7 +308,7 @@ func resourceServerCreate(d *schema.ResourceData, m interface{}) error {
 ```
 
 This uses the [`schema.ResourceData
-API`](https://godoc.org/github.com/hashicorp/terraform/helper/schema#ResourceData)
+API`](https://godoc.org/github.com/appilon/terraform-plugin-sdk/schema#ResourceData)
 to get the value of `"address"` provided by the user in the Terraform
 configuration. Due to the way Go works, we have to typecast it to string. This
 is a safe operation, however, since our schema guarantees it will be a string

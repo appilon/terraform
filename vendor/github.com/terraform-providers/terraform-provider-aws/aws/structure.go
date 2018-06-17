@@ -38,8 +38,8 @@ import (
 	"github.com/aws/aws-sdk-go/service/ssm"
 	"github.com/aws/aws-sdk-go/service/waf"
 	"github.com/beevik/etree"
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/helper/structure"
+	"github.com/appilon/terraform-plugin-sdk/schema"
+	"github.com/appilon/terraform-plugin-sdk/structure"
 	"github.com/mitchellh/copystructure"
 	"gopkg.in/yaml.v2"
 )

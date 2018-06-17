@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	backendinit "github.com/hashicorp/terraform/backend/init"
-	"github.com/hashicorp/terraform/helper/resource"
+	"github.com/appilon/terraform-plugin-sdk/resource"
 	"github.com/hashicorp/terraform/terraform"
 )
 
