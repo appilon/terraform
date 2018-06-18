@@ -8,8 +8,8 @@ import (
 	"os/exec"
 	"runtime"
 
-	"github.com/armon/circbuf"
 	"github.com/appilon/terraform-plugin-sdk/schema"
+	"github.com/armon/circbuf"
 	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/go-linereader"
 )

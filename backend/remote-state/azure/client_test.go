@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/Azure/azure-sdk-for-go/storage"
+	"github.com/appilon/terraform-plugin-sdk/acctest"
 	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/helper/acctest"
 	"github.com/hashicorp/terraform/state/remote"
 )
 

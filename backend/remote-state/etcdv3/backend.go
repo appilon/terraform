@@ -3,10 +3,10 @@ package etcd
 import (
 	"context"
 
+	"github.com/appilon/terraform-plugin-sdk/schema"
 	etcdv3 "github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/pkg/transport"
 	"github.com/hashicorp/terraform/backend"
-	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 const (

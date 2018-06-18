@@ -5,8 +5,8 @@ import (
 	"path"
 	"testing"
 
-	"github.com/hashicorp/terraform/communicator"
 	"github.com/appilon/terraform-plugin-sdk/schema"
+	"github.com/hashicorp/terraform/communicator"
 	"github.com/hashicorp/terraform/terraform"
 )
 

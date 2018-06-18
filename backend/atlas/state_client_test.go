@@ -13,8 +13,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/appilon/terraform-plugin-sdk/acctest"
 	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/helper/acctest"
 	"github.com/hashicorp/terraform/state/remote"
 	"github.com/hashicorp/terraform/terraform"
 )

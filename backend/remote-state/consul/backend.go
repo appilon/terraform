@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/appilon/terraform-plugin-sdk/schema"
 	consulapi "github.com/hashicorp/consul/api"
 	"github.com/hashicorp/terraform/backend"
-	"github.com/appilon/terraform-plugin-sdk/schema"
 )
 
 // New creates a new backend for Consul remote state.

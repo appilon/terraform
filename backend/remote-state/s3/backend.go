@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/appilon/terraform-plugin-sdk/schema"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/hashicorp/terraform/backend"
-	"github.com/appilon/terraform-plugin-sdk/schema"
 
 	terraformAWS "github.com/terraform-providers/terraform-provider-aws/aws"
 )

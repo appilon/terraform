@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	backendinit "github.com/hashicorp/terraform/backend/init"
 	"github.com/appilon/terraform-plugin-sdk/resource"
+	backendinit "github.com/hashicorp/terraform/backend/init"
 	"github.com/hashicorp/terraform/terraform"
 )
 

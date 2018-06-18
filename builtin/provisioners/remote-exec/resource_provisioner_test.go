@@ -9,10 +9,10 @@ import (
 
 	"strings"
 
+	"github.com/appilon/terraform-plugin-sdk/schema"
 	"github.com/hashicorp/terraform/communicator"
 	"github.com/hashicorp/terraform/communicator/remote"
 	"github.com/hashicorp/terraform/config"
-	"github.com/appilon/terraform-plugin-sdk/schema"
 	"github.com/hashicorp/terraform/terraform"
 )
 

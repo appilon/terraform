@@ -11,9 +11,9 @@ import (
 	"strings"
 	"text/template"
 
+	"github.com/appilon/terraform-plugin-sdk/schema"
 	"github.com/hashicorp/terraform/communicator"
 	"github.com/hashicorp/terraform/communicator/remote"
-	"github.com/appilon/terraform-plugin-sdk/schema"
 	"github.com/hashicorp/terraform/terraform"
 	linereader "github.com/mitchellh/go-linereader"
 )

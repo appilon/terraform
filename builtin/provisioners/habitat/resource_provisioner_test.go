@@ -3,8 +3,8 @@ package habitat
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/config"
 	"github.com/appilon/terraform-plugin-sdk/schema"
+	"github.com/hashicorp/terraform/config"
 	"github.com/hashicorp/terraform/terraform"
 )
 

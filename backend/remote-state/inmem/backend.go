@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hashicorp/terraform/backend"
 	"github.com/appilon/terraform-plugin-sdk/schema"
+	"github.com/hashicorp/terraform/backend"
 	"github.com/hashicorp/terraform/state"
 	"github.com/hashicorp/terraform/state/remote"
 	"github.com/hashicorp/terraform/terraform"

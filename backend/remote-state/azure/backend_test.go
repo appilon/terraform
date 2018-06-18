@@ -11,8 +11,8 @@ import (
 	"github.com/Azure/go-autorest/autorest"
 	"github.com/Azure/go-autorest/autorest/adal"
 	"github.com/Azure/go-autorest/autorest/azure"
+	"github.com/appilon/terraform-plugin-sdk/acctest"
 	"github.com/hashicorp/terraform/backend"
-	"github.com/hashicorp/terraform/helper/acctest"
 )
 
 // verify that we are doing ACC tests or the Azure tests specifically
