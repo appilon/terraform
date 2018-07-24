@@ -20,6 +20,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/appilon/tfdev/instrumentation"
 	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/copystructure"
 	"github.com/mitchellh/mapstructure"
@@ -214,6 +215,7 @@ type SchemaDefaultFunc func() (interface{}, error)
 // given environment variable, if one exists, or the default value
 // otherwise.
 func EnvDefaultFunc(k string, dv interface{}) SchemaDefaultFunc {
+	instrumentation.CaptureHelper(k, dv)
 	return func() (interface{}, error) {
 		if v := os.Getenv(k); v != "" {
 			return v, nil
@@ -228,6 +230,7 @@ func EnvDefaultFunc(k string, dv interface{}) SchemaDefaultFunc {
 // none of the environment variables return a value, the default value is
 // returned.
 func MultiEnvDefaultFunc(ks []string, dv interface{}) SchemaDefaultFunc {
+	instrumentation.CaptureHelper(ks, dv)
 	return func() (interface{}, error) {
 		for _, k := range ks {
 			if v := os.Getenv(k); v != "" {

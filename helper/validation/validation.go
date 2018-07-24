@@ -9,6 +9,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/appilon/tfdev/instrumentation"
 	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/hashicorp/terraform/helper/structure"
 )
@@ -16,6 +17,7 @@ import (
 // IntBetween returns a SchemaValidateFunc which tests if the provided value
 // is of type int and is between min and max (inclusive)
 func IntBetween(min, max int) schema.SchemaValidateFunc {
+	instrumentation.CaptureHelper(min, max)
 	return func(i interface{}, k string) (s []string, es []error) {
 		v, ok := i.(int)
 		if !ok {
@@ -35,6 +37,7 @@ func IntBetween(min, max int) schema.SchemaValidateFunc {
 // IntAtLeast returns a SchemaValidateFunc which tests if the provided value
 // is of type int and is at least min (inclusive)
 func IntAtLeast(min int) schema.SchemaValidateFunc {
+	instrumentation.CaptureHelper(min)
 	return func(i interface{}, k string) (s []string, es []error) {
 		v, ok := i.(int)
 		if !ok {
@@ -54,6 +57,7 @@ func IntAtLeast(min int) schema.SchemaValidateFunc {
 // IntAtMost returns a SchemaValidateFunc which tests if the provided value
 // is of type int and is at most max (inclusive)
 func IntAtMost(max int) schema.SchemaValidateFunc {
+	instrumentation.CaptureHelper(max)
 	return func(i interface{}, k string) (s []string, es []error) {
 		v, ok := i.(int)
 		if !ok {
@@ -74,6 +78,7 @@ func IntAtMost(max int) schema.SchemaValidateFunc {
 // is of type string and matches the value of an element in the valid slice
 // will test with in lower case if ignoreCase is true
 func StringInSlice(valid []string, ignoreCase bool) schema.SchemaValidateFunc {
+	instrumentation.CaptureHelper(valid, ignoreCase)
 	return func(i interface{}, k string) (s []string, es []error) {
 		v, ok := i.(string)
 		if !ok {
@@ -95,6 +100,7 @@ func StringInSlice(valid []string, ignoreCase bool) schema.SchemaValidateFunc {
 // StringLenBetween returns a SchemaValidateFunc which tests if the provided value
 // is of type string and has length between min and max (inclusive)
 func StringLenBetween(min, max int) schema.SchemaValidateFunc {
+	instrumentation.CaptureHelper(min, max)
 	return func(i interface{}, k string) (s []string, es []error) {
 		v, ok := i.(string)
 		if !ok {
@@ -112,6 +118,7 @@ func StringLenBetween(min, max int) schema.SchemaValidateFunc {
 // matches a given regexp. Optionally an error message can be provided to
 // return something friendlier than "must match some globby regexp".
 func StringMatch(r *regexp.Regexp, message string) schema.SchemaValidateFunc {
+	instrumentation.CaptureHelper(r, message)
 	return func(i interface{}, k string) ([]string, []error) {
 		v, ok := i.(string)
 		if !ok {
@@ -133,6 +140,7 @@ func StringMatch(r *regexp.Regexp, message string) schema.SchemaValidateFunc {
 // not a zero value. It's useful in situations where you want to catch
 // explicit zero values on things like required fields during validation.
 func NoZeroValues(i interface{}, k string) (s []string, es []error) {
+	instrumentation.CaptureHelper(i, k)
 	if reflect.ValueOf(i).Interface() == reflect.Zero(reflect.TypeOf(i)).Interface() {
 		switch reflect.TypeOf(i).Kind() {
 		case reflect.String:
@@ -150,6 +158,7 @@ func NoZeroValues(i interface{}, k string) (s []string, es []error) {
 // CIDRNetwork returns a SchemaValidateFunc which tests if the provided value
 // is of type string, is in valid CIDR network notation, and has significant bits between min and max (inclusive)
 func CIDRNetwork(min, max int) schema.SchemaValidateFunc {
+	instrumentation.CaptureHelper(min, max)
 	return func(i interface{}, k string) (s []string, es []error) {
 		v, ok := i.(string)
 		if !ok {
@@ -184,6 +193,7 @@ func CIDRNetwork(min, max int) schema.SchemaValidateFunc {
 // SingleIP returns a SchemaValidateFunc which tests if the provided value
 // is of type string, and in valid single IP notation
 func SingleIP() schema.SchemaValidateFunc {
+	instrumentation.CaptureHelper()
 	return func(i interface{}, k string) (s []string, es []error) {
 		v, ok := i.(string)
 		if !ok {
@@ -203,6 +213,7 @@ func SingleIP() schema.SchemaValidateFunc {
 // IPRange returns a SchemaValidateFunc which tests if the provided value
 // is of type string, and in valid IP range notation
 func IPRange() schema.SchemaValidateFunc {
+	instrumentation.CaptureHelper()
 	return func(i interface{}, k string) (s []string, es []error) {
 		v, ok := i.(string)
 		if !ok {
@@ -229,6 +240,7 @@ func IPRange() schema.SchemaValidateFunc {
 // ValidateJsonString is a SchemaValidateFunc which tests to make sure the
 // supplied string is valid JSON.
 func ValidateJsonString(v interface{}, k string) (ws []string, errors []error) {
+	instrumentation.CaptureHelper(v, k)
 	if _, err := structure.NormalizeJsonString(v); err != nil {
 		errors = append(errors, fmt.Errorf("%q contains an invalid JSON: %s", k, err))
 	}
@@ -239,6 +251,7 @@ func ValidateJsonString(v interface{}, k string) (ws []string, errors []error) {
 // duplicate items in it. It's useful for when a list is needed over a set
 // because order matters, yet the items still need to be unique.
 func ValidateListUniqueStrings(v interface{}, k string) (ws []string, errors []error) {
+	instrumentation.CaptureHelper(v, k)
 	for n1, v1 := range v.([]interface{}) {
 		for n2, v2 := range v.([]interface{}) {
 			if v1.(string) == v2.(string) && n1 != n2 {
@@ -252,6 +265,7 @@ func ValidateListUniqueStrings(v interface{}, k string) (ws []string, errors []e
 // ValidateRegexp returns a SchemaValidateFunc which tests to make sure the
 // supplied string is a valid regular expression.
 func ValidateRegexp(v interface{}, k string) (ws []string, errors []error) {
+	instrumentation.CaptureHelper(v, k)
 	if _, err := regexp.Compile(v.(string)); err != nil {
 		errors = append(errors, fmt.Errorf("%q: %s", k, err))
 	}
@@ -261,6 +275,7 @@ func ValidateRegexp(v interface{}, k string) (ws []string, errors []error) {
 // ValidateRFC3339TimeString is a ValidateFunc that ensures a string parses
 // as time.RFC3339 format
 func ValidateRFC3339TimeString(v interface{}, k string) (ws []string, errors []error) {
+	instrumentation.CaptureHelper(v, k)
 	if _, err := time.Parse(time.RFC3339, v.(string)); err != nil {
 		errors = append(errors, fmt.Errorf("%q: invalid RFC3339 timestamp", k))
 	}
